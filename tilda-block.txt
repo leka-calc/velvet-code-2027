@@ -335,7 +335,7 @@ background:linear-gradient(130deg,#97642c 0%,#d9ac63 17%,#fff0b4 45%,#d5a45f 70%
     }
     err.textContent='';
     currentLetter={decision:decision,now:now};
-    $('vk-result-decision').textContent='«Я так рада, что в этом году наконец-то решилась на '+decision+'»';
+    $('vk-result-decision').textContent='«Я так рада, что в этом году наконец-то решилась '+decision+'»';
     $('vk-result-now').textContent='И теперь Я '+now;
     show($('vk-created-stage'));show($('vk-calculator-stage'));
     jump($('vk-created-stage'));
@@ -344,7 +344,7 @@ background:linear-gradient(130deg,#97642c 0%,#d9ac63 17%,#fff0b4 45%,#d5a45f 70%
   function letterPlainText(){
     if(!currentLetter)return '';
     return 'Письмо себе из будущего — декабрь 2027 года\n\n'
-      +'«Я так рада, что в этом году наконец-то решилась на '+currentLetter.decision+'»\n\n'
+      +'«Я так рада, что в этом году наконец-то решилась '+currentLetter.decision+'»\n\n'
       +'И теперь Я '+currentLetter.now;
   }
   $('vk-copy-letter').addEventListener('click',function(){
@@ -404,7 +404,7 @@ background:linear-gradient(130deg,#97642c 0%,#d9ac63 17%,#fff0b4 45%,#d5a45f 70%
     ctx.fillStyle='#612533';ctx.font='61px Georgia';ctx.fillText('Письмо себе',540,309);
     ctx.fillText('из будущего',540,378);
     ctx.strokeStyle='#bc925e';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(235,428);ctx.lineTo(845,428);ctx.stroke();
-    var t1='«Я так рада, что в этом году наконец-то решилась на '+currentLetter.decision+'»';
+    var t1='«Я так рада, что в этом году наконец-то решилась '+currentLetter.decision+'»';
     var t2='И теперь Я '+currentLetter.now;
     function renderText(text,startY,maxBottom,maxFont){
       var font=maxFont,lines=[];

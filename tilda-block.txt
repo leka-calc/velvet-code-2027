@@ -480,10 +480,10 @@ background:linear-gradient(130deg,#97642c 0%,#d9ac63 17%,#fff0b4 45%,#d5a45f 70%
       $('vk-birth').focus();return;
     }
     $('vk-calc-error').textContent='';
-    var A=reduce22(+b.dd),B=digitSum(b.mm),V=digitSum('2027');
+    var A=reduce22(+b.dd),B=reduce22(+b.mm),V=digitSum('2027');
     var G=reduce22(A+B+V);
     var D=reduce22(A+B+V+G);
-    // Source formula: A = day as is, digit sum only if >22 (Вероника, 15.11); B = sum month digits;
+    // Source formula: A = day as is, digit sum only if >22 (Вероника, 15.11); B = month as is (≤22, Вероника 16.11);
     // V = sum of 2027; G = A+B+V (reduced to <=22);
     // D = A+B+V+G (reduced to <=22).
     currentArc=D;currentSex='female';
